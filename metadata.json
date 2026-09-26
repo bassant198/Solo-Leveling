@@ -1,0 +1,6 @@
+{
+  "name": "Solo Leveling — The System & Shadow Monarch Experience",
+  "description": "A premium, cinematic interactive web experience inspired by Solo Leveling. Enter the System, inspect Hunter status, command the Shadow Army, and conquer dimensional gates.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

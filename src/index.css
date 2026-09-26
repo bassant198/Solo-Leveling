@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-cinzel: 'Cinzel', serif;
+    --font-rajdhani: 'Rajdhani', sans-serif;
+    --font-space: 'Space Grotesk', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-space), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #03040A;
+    color: #F4F7FF;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #03040A;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1A1F38;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5B4BFF;
+  }
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+.font-rajdhani {
+  font-family: var(--font-rajdhani);
+}
+
+.font-mono-tech {
+  font-family: var(--font-mono);
+}
+
+/* Subtle holographic scanline effect */
+.system-scanline {
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0),
+    rgba(255,255,255,0) 50%,
+    rgba(0, 229, 255, 0.03) 50%,
+    rgba(0, 229, 255, 0.03)
+  );
+  background-size: 100% 4px;
+}
+
+/* Subtle glowing pulse */
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.03);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 6s ease-in-out infinite;
+}
+
+/* Ethereal shadow fog */
+@keyframes shadowDrift {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.25;
+  }
+}
+
+.animate-shadow-drift {
+  animation: shadowDrift 10s ease-in-out infinite;
+}
+
+/* Monolith System Panel border glow */
+.system-border {
+  border: 1px solid rgba(91, 75, 255, 0.25);
+  box-shadow: 0 0 25px -5px rgba(91, 75, 255, 0.12), inset 0 0 15px -3px rgba(57, 167, 255, 0.05);
+}
+
+.system-border-cyan {
+  border: 1px solid rgba(57, 167, 255, 0.3);
+  box-shadow: 0 0 25px -5px rgba(57, 167, 255, 0.18), inset 0 0 15px -3px rgba(57, 167, 255, 0.08);
+}
+
+.system-border-crimson {
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  box-shadow: 0 0 35px -5px rgba(239, 68, 68, 0.25), inset 0 0 20px -3px rgba(239, 68, 68, 0.1);
+}
+
+/* Subtle text light sweep */
+@keyframes textShine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.animate-text-shine {
+  background-size: 200% auto;
+  animation: textShine 6s ease-in-out infinite;
+}
+
+/* Horizontal fog drift */
+@keyframes fogDriftLeft {
+  0% {
+    transform: translateX(0) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateX(-40px) scale(1.08);
+    opacity: 0.35;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 0.2;
+  }
+}
+
+@keyframes fogDriftRight {
+  0% {
+    transform: translateX(0) scale(1.05);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateX(45px) scale(1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(0) scale(1.05);
+    opacity: 0.25;
+  }
+}
+
+.animate-fog-left {
+  animation: fogDriftLeft 14s ease-in-out infinite;
+}
+
+.animate-fog-right {
+  animation: fogDriftRight 18s ease-in-out infinite;
+}
+
+/* Subtle scanning bar */
+@keyframes scanBar {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.animate-scan-bar {
+  animation: scanBar 8s linear infinite;
+}
+
+/* Prevent cursor lag on mobile */
+@media (pointer: coarse) {
+  .custom-cursor-element {
+    display: none !important;
+  }
+}
+
